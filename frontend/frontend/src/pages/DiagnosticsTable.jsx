@@ -23,7 +23,7 @@ export default function DiagnosticsTable() {
   const [loading, setLoading] = useState(false);
   const [cities, setCities] = useState([]);
 
-  // Calcula o total de páginas
+  
   const totalPages = Math.ceil(totalItems / limit);
 
   const fetchData = async () => {
@@ -35,7 +35,7 @@ export default function DiagnosticsTable() {
       setData(res.data);
       setTotalItems(res.total);
       
-      // Simulação: obter lista de cidades disponíveis (substitua por chamada real ao backend)
+      
       if (page === 1) {
         const uniqueCities = [...new Set(res.data.map(item => item.city))];
         setCities(uniqueCities);

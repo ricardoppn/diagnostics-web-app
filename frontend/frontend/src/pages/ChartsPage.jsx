@@ -16,7 +16,7 @@ export default function ChartsPage() {
       setError(null);
       try {
         const res = await fetchAggregated({ city, state });
-        setData(res); // Supondo que a resposta tenha os dados necessários para o gráfico
+        setData(res); 
       } catch (err) {
         console.error("Erro ao buscar dados agregados:", err);
         setError("Erro ao carregar dados.");
