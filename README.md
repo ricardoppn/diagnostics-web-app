@@ -17,6 +17,7 @@ Projeto full-stack com backend em Python (Flask) e frontend em React. A aplicaç
 
 ## 📦 Como rodar o projeto
 
+
 ### Pré-requisitos
 
 - Docker
@@ -25,13 +26,22 @@ Projeto full-stack com backend em Python (Flask) e frontend em React. A aplicaç
 - Python
 
 ### Clone o repositório
-
     
     git clone https://github.com/seu-usuario/diagnostics-web-app.git
     cd diagnostics-web-app
     
+### Utilizando Makefile
+  Caso queira utilizar o Makefile segue basta utilizar os seguintes comandos 
 
-### Iniciando o Projeto:
+    make up             # Sobe os containers com build
+    make down           # Derruba os containers
+    make restart        # Reinicia tudo
+    make backend-shell  # Entra no container do backend
+    make frontend-install  # Instala dependências do front
+    make frontend-dev      # Roda o front em modo dev
+    make start          # Faz tudo de uma vez (subida + front)
+
+### Iniciando manualmente:
 
     
     docker-compose up --build
